@@ -70,7 +70,7 @@ int main (int argc, char** argv)
 
   pcl::PointCloud<pcl::PFHSignature125>::Ptr pfhFeatures(new pcl::PointCloud<pcl::PFHSignature125>);
 
-  pfhEstimation.setRadiusSearch (0.1);
+  pfhEstimation.setRadiusSearch (0.05);
 
   // Actually compute the features
   std::cout << "Computing features..." << std::endl;
@@ -91,6 +91,8 @@ int main (int argc, char** argv)
 // Plotter object.
   pcl::visualization::PCLHistogramVisualizer viewer;
   // We need to set the size of the descriptor beforehand.
+  for(auto x:pfhFeatures->points)
+    cout<<x<<" ";
   viewer.addFeatureHistogram(*pfhFeatures, 125);
 
   viewer.spin();

@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/pratyush1999/Documents/honors/pcl/moment_of_inertia.cpp" "/home/pratyush1999/Documents/honors/pcl/build/CMakeFiles/remove_outliers.dir/moment_of_inertia.cpp.o"
+  "/home/pratyush1999/Documents/honors/pcl/normal_estimation.cpp" "/home/pratyush1999/Documents/honors/pcl/build/CMakeFiles/remove_outliers.dir/normal_estimation.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

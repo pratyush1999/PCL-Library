@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/remove_outliers.dir/moment_of_inertia.cpp.o"
+  "CMakeFiles/remove_outliers.dir/normal_estimation.cpp.o"
   "remove_outliers.pdb"
   "remove_outliers"
 )

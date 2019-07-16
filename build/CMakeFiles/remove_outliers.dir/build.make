@@ -57,38 +57,38 @@ include CMakeFiles/remove_outliers.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/remove_outliers.dir/flags.make
 
-CMakeFiles/remove_outliers.dir/moment_of_inertia.cpp.o: CMakeFiles/remove_outliers.dir/flags.make
-CMakeFiles/remove_outliers.dir/moment_of_inertia.cpp.o: ../moment_of_inertia.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pratyush1999/Documents/honors/pcl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/remove_outliers.dir/moment_of_inertia.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/remove_outliers.dir/moment_of_inertia.cpp.o -c /home/pratyush1999/Documents/honors/pcl/moment_of_inertia.cpp
+CMakeFiles/remove_outliers.dir/normal_estimation.cpp.o: CMakeFiles/remove_outliers.dir/flags.make
+CMakeFiles/remove_outliers.dir/normal_estimation.cpp.o: ../normal_estimation.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pratyush1999/Documents/honors/pcl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/remove_outliers.dir/normal_estimation.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/remove_outliers.dir/normal_estimation.cpp.o -c /home/pratyush1999/Documents/honors/pcl/normal_estimation.cpp
 
-CMakeFiles/remove_outliers.dir/moment_of_inertia.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/remove_outliers.dir/moment_of_inertia.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/pratyush1999/Documents/honors/pcl/moment_of_inertia.cpp > CMakeFiles/remove_outliers.dir/moment_of_inertia.cpp.i
+CMakeFiles/remove_outliers.dir/normal_estimation.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/remove_outliers.dir/normal_estimation.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/pratyush1999/Documents/honors/pcl/normal_estimation.cpp > CMakeFiles/remove_outliers.dir/normal_estimation.cpp.i
 
-CMakeFiles/remove_outliers.dir/moment_of_inertia.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/remove_outliers.dir/moment_of_inertia.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pratyush1999/Documents/honors/pcl/moment_of_inertia.cpp -o CMakeFiles/remove_outliers.dir/moment_of_inertia.cpp.s
+CMakeFiles/remove_outliers.dir/normal_estimation.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/remove_outliers.dir/normal_estimation.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pratyush1999/Documents/honors/pcl/normal_estimation.cpp -o CMakeFiles/remove_outliers.dir/normal_estimation.cpp.s
 
-CMakeFiles/remove_outliers.dir/moment_of_inertia.cpp.o.requires:
+CMakeFiles/remove_outliers.dir/normal_estimation.cpp.o.requires:
 
-.PHONY : CMakeFiles/remove_outliers.dir/moment_of_inertia.cpp.o.requires
+.PHONY : CMakeFiles/remove_outliers.dir/normal_estimation.cpp.o.requires
 
-CMakeFiles/remove_outliers.dir/moment_of_inertia.cpp.o.provides: CMakeFiles/remove_outliers.dir/moment_of_inertia.cpp.o.requires
-	$(MAKE) -f CMakeFiles/remove_outliers.dir/build.make CMakeFiles/remove_outliers.dir/moment_of_inertia.cpp.o.provides.build
-.PHONY : CMakeFiles/remove_outliers.dir/moment_of_inertia.cpp.o.provides
+CMakeFiles/remove_outliers.dir/normal_estimation.cpp.o.provides: CMakeFiles/remove_outliers.dir/normal_estimation.cpp.o.requires
+	$(MAKE) -f CMakeFiles/remove_outliers.dir/build.make CMakeFiles/remove_outliers.dir/normal_estimation.cpp.o.provides.build
+.PHONY : CMakeFiles/remove_outliers.dir/normal_estimation.cpp.o.provides
 
-CMakeFiles/remove_outliers.dir/moment_of_inertia.cpp.o.provides.build: CMakeFiles/remove_outliers.dir/moment_of_inertia.cpp.o
+CMakeFiles/remove_outliers.dir/normal_estimation.cpp.o.provides.build: CMakeFiles/remove_outliers.dir/normal_estimation.cpp.o
 
 
 # Object files for target remove_outliers
 remove_outliers_OBJECTS = \
-"CMakeFiles/remove_outliers.dir/moment_of_inertia.cpp.o"
+"CMakeFiles/remove_outliers.dir/normal_estimation.cpp.o"
 
 # External object files for target remove_outliers
 remove_outliers_EXTERNAL_OBJECTS =
 
-remove_outliers: CMakeFiles/remove_outliers.dir/moment_of_inertia.cpp.o
+remove_outliers: CMakeFiles/remove_outliers.dir/normal_estimation.cpp.o
 remove_outliers: CMakeFiles/remove_outliers.dir/build.make
 remove_outliers: /usr/local/lib/libpcl_apps.so
 remove_outliers: /usr/local/lib/libpcl_outofcore.so
@@ -313,7 +313,7 @@ CMakeFiles/remove_outliers.dir/build: remove_outliers
 
 .PHONY : CMakeFiles/remove_outliers.dir/build
 
-CMakeFiles/remove_outliers.dir/requires: CMakeFiles/remove_outliers.dir/moment_of_inertia.cpp.o.requires
+CMakeFiles/remove_outliers.dir/requires: CMakeFiles/remove_outliers.dir/normal_estimation.cpp.o.requires
 
 .PHONY : CMakeFiles/remove_outliers.dir/requires
 

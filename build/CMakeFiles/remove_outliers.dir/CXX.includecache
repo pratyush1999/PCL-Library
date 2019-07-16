@@ -6,16 +6,14 @@
 
 #IncludeRegexTransform: 
 
-/home/pratyush1999/Documents/honors/pcl/moment_of_inertia.cpp
-vector
+/home/pratyush1999/Documents/honors/pcl/normal_estimation.cpp
+pcl/point_types.h
 -
-thread
+pcl/features/normal_3d.h
 -
-pcl/features/moment_of_inertia_estimation.h
+pcl/io/io.h
 -
 pcl/io/pcd_io.h
--
-pcl/point_types.h
 -
 pcl/visualization/cloud_viewer.h
 -
@@ -2288,6 +2286,20 @@ pcl/correspondence.h
 pcl/impl/cloud_iterator.hpp
 -
 
+/usr/local/include/pcl-1.9/pcl/common/centroid.h
+pcl/point_cloud.h
+-
+pcl/point_traits.h
+-
+pcl/PointIndices.h
+-
+pcl/cloud_iterator.h
+-
+pcl/common/impl/accumulators.hpp
+-
+pcl/common/impl/centroid.hpp
+-
+
 /usr/local/include/pcl-1.9/pcl/common/colors.h
 pcl/pcl_macros.h
 -
@@ -2332,6 +2344,28 @@ Eigen/Dense
 Eigen/Eigenvalues
 -
 pcl/common/impl/eigen.hpp
+-
+
+/usr/local/include/pcl-1.9/pcl/common/impl/accumulators.hpp
+map
+-
+boost/mpl/filter_view.hpp
+-
+boost/fusion/include/mpl.hpp
+-
+boost/fusion/include/for_each.hpp
+-
+boost/fusion/include/as_vector.hpp
+-
+pcl/point_types.h
+-
+
+/usr/local/include/pcl-1.9/pcl/common/impl/centroid.hpp
+pcl/common/centroid.h
+-
+pcl/conversions.h
+-
+boost/mpl/size.hpp
 -
 
 /usr/local/include/pcl-1.9/pcl/common/impl/common.hpp
@@ -2470,20 +2504,16 @@ pcl/features/impl/feature.hpp
 pcl/search/pcl_search.h
 -
 
-/usr/local/include/pcl-1.9/pcl/features/impl/moment_of_inertia_estimation.hpp
-pcl/features/moment_of_inertia_estimation.h
+/usr/local/include/pcl-1.9/pcl/features/impl/normal_3d.hpp
+pcl/features/normal_3d.h
 -
 
-/usr/local/include/pcl-1.9/pcl/features/moment_of_inertia_estimation.h
-vector
--
-math.h
--
+/usr/local/include/pcl-1.9/pcl/features/normal_3d.h
 pcl/features/feature.h
 -
-pcl/PointIndices.h
+pcl/common/centroid.h
 -
-pcl/features/impl/moment_of_inertia_estimation.hpp
+pcl/features/impl/normal_3d.hpp
 -
 
 /usr/local/include/pcl-1.9/pcl/for_each_type.h
@@ -2646,6 +2676,10 @@ pcl/io/low_level_io.h
 pcl/io/pcd_io.h
 -
 pcl/io/lzf.h
+-
+
+/usr/local/include/pcl-1.9/pcl/io/io.h
+pcl/common/io.h
 -
 
 /usr/local/include/pcl-1.9/pcl/io/low_level_io.h

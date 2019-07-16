@@ -10,10 +10,12 @@
 #include<pcl/visualization/pcl_plotter.h>
 #include<pcl/visualization/histogram_visualizer.h>
 #include <pcl/visualization/cloud_viewer.h>
-
+using namespace std;
 int main (int argc, char** argv){
  typedef pcl::PointXYZ InputPointType;
   pcl::PointCloud<InputPointType>::Ptr cloud (new pcl::PointCloud<InputPointType>);
+    pcl::PointCloud<InputPointType>::Ptr cloud_fixed_point (new pcl::PointCloud<InputPointType>);
+
   if(argc > 1)
   {
     // Read the point cloud from the first command line argument
@@ -39,7 +41,6 @@ int main (int argc, char** argv){
       cloud->push_back(p);
       }
   }
-
   
   std::cout << "Loaded " << cloud->points.size() << " points." << std::endl;
 
@@ -75,19 +76,27 @@ int main (int argc, char** argv){
 
   // Use all neighbors in a sphere of radius 5cm
   // IMPORTANT: the radius used here has to be larger than the radius used to estimate the surface normals!!!
-  fpfh.setRadiusSearch (0.05);
+  fpfh.setRadiusSearch (0.1);
 
   // Compute the features
   fpfh.compute (*fpfhs);
 
   std::cout << "output points.size (): " << fpfhs->points.size () << std::endl;
   // fpfhs->points.size () should have the same size as the input cloud->points.size ()*
+  //         int32_t rgb = (static_cast<uint32_t>(1) << 16 |
+  // static_cast<uint32_t>(g) << 8 | static_cast<uint32_t>(1));
+  //         cloud->points[0].rgb=rgb;
 
-      pcl::visualization::PCLVisualizer viewer_cloud("PCL Viewer");
-     viewer_cloud.setBackgroundColor (0.0, 0.0, 0.5);
+         pcl::visualization::PCLVisualizer viewer_cloud("PCL Viewer");
+     viewer_cloud.setBackgroundColor (0, 0, 0.1);
 
+ 
      viewer_cloud.addPointCloud<pcl::PointXYZ>(cloud);
+   cloud_fixed_point->push_back(cloud->points[0]);
 
+    pcl::visualization::PointCloudColorHandlerCustom<pcl::PointXYZ> rgb (cloud_fixed_point, 255, 0, 0);
+    
+     viewer_cloud.addPointCloud<pcl::PointXYZ> (cloud_fixed_point, rgb, "Cloud");
      while (!viewer_cloud.wasStopped ())
      {
        viewer_cloud.spinOnce ();
@@ -95,7 +104,10 @@ int main (int argc, char** argv){
     
 // Plotter object.
   pcl::visualization::PCLHistogramVisualizer viewer;
+      // for(auto x:fpfhs->points)
+
   // We need to set the size of the descriptor beforehand.
+
   viewer.addFeatureHistogram(*fpfhs, 33);
 
   viewer.spin();

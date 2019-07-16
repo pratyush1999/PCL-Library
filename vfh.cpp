@@ -35,13 +35,14 @@ int main (int argc, char** argv){
       p.x = drand48(); p.y = drand48(); p.z = drand48();
 
       //std::cout << "p: " << p << std::endl;
+     // cout<<p.x<<" "<<p.y<<" "<<p.z<<"\n";
       cloud->push_back(p);
       }
   }
 
-  
   std::cout << "Loaded " << cloud->points.size() << " points." << std::endl;
-
+   //for(auto x:cloud->points)
+   // cout<<x<<" ";
   // Compute the normals
   pcl::NormalEstimation<pcl::PointXYZ, pcl::Normal> normalEstimation;
   normalEstimation.setInputCloud (cloud);
@@ -51,7 +52,7 @@ int main (int argc, char** argv){
 
   pcl::PointCloud<pcl::Normal>::Ptr cloudWithNormals (new pcl::PointCloud<pcl::Normal>);
 
-  normalEstimation.setRadiusSearch (0.03);
+  normalEstimation.setRadiusSearch (0.1);
 
   std::cout << "Computing normals..." << std::endl;
   normalEstimation.compute (*cloudWithNormals);
@@ -89,6 +90,8 @@ int main (int argc, char** argv){
      }
     
 // Plotter object.
+    //   for(auto x:vfhs->points)
+    // cout<<x<<" ";
   pcl::visualization::PCLHistogramVisualizer viewer;
   // We need to set the size of the descriptor beforehand.
   viewer.addFeatureHistogram(*vfhs, 308);

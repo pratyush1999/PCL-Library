@@ -49,10 +49,10 @@ int main (int argc, char** argv)
   viewer->addCube (min_point_AABB.x, max_point_AABB.x, min_point_AABB.y, max_point_AABB.y, min_point_AABB.z, max_point_AABB.z, 1.0, 1.0, 0.0, "AABB");
   viewer->setShapeRenderingProperties(pcl::visualization::PCL_VISUALIZER_REPRESENTATION, pcl::visualization::PCL_VISUALIZER_REPRESENTATION_WIREFRAME, "AABB");
 
-  // Eigen::Vector3f position (position_OBB.x, position_OBB.y, position_OBB.z);
-  // Eigen::Quaternionf quat (rotational_matrix_OBB);
-  // viewer->addCube (position, quat, max_point_OBB.x - min_point_OBB.x, max_point_OBB.y - min_point_OBB.y, max_point_OBB.z - min_point_OBB.z, "OBB");
-  // viewer->setShapeRenderingProperties(pcl::visualization::PCL_VISUALIZER_REPRESENTATION, pcl::visualization::PCL_VISUALIZER_REPRESENTATION_WIREFRAME, "OBB");
+  Eigen::Vector3f position (position_OBB.x, position_OBB.y, position_OBB.z);
+  Eigen::Quaternionf quat (rotational_matrix_OBB);
+  viewer->addCube (position, quat, max_point_OBB.x - min_point_OBB.x, max_point_OBB.y - min_point_OBB.y, max_point_OBB.z - min_point_OBB.z, "OBB");
+  viewer->setShapeRenderingProperties(pcl::visualization::PCL_VISUALIZER_REPRESENTATION, pcl::visualization::PCL_VISUALIZER_REPRESENTATION_WIREFRAME, "OBB");
    viewer->setRepresentationToWireframeForAllActors(); 
   pcl::PointXYZ center (mass_center (0), mass_center (1), mass_center (2));
   pcl::PointXYZ x_axis (major_vector (0) + mass_center (0), major_vector (1) + mass_center (1), major_vector (2) + mass_center (2));
@@ -64,9 +64,8 @@ int main (int argc, char** argv)
 
   while(!viewer->wasStopped())
   {
-    viewer->spinOnce (100);
-    std::this_thread::sleep_for(100ms);
+    viewer->spinOnce (1);
+    std::this_thread::sleep_for(1ms);
   }
-
   return (0);
 }

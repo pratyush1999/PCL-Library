@@ -8,5 +8,5 @@ include_directories(${PCL_INCLUDE_DIRS})
 link_directories(${PCL_LIBRARY_DIRS})
 add_definitions(${PCL_DEFINITIONS})
 
-add_executable (remove_outliers moment_of_inertia.cpp)
+add_executable (remove_outliers normal_estimation.cpp )
 target_link_libraries (remove_outliers ${PCL_LIBRARIES})

@@ -123,32 +123,32 @@ remove_outliers/fast:
 	$(MAKE) -f CMakeFiles/remove_outliers.dir/build.make CMakeFiles/remove_outliers.dir/build
 .PHONY : remove_outliers/fast
 
-moment_of_inertia.o: moment_of_inertia.cpp.o
+normal_estimation.o: normal_estimation.cpp.o
 
-.PHONY : moment_of_inertia.o
+.PHONY : normal_estimation.o
 
 # target to build an object file
-moment_of_inertia.cpp.o:
-	$(MAKE) -f CMakeFiles/remove_outliers.dir/build.make CMakeFiles/remove_outliers.dir/moment_of_inertia.cpp.o
-.PHONY : moment_of_inertia.cpp.o
+normal_estimation.cpp.o:
+	$(MAKE) -f CMakeFiles/remove_outliers.dir/build.make CMakeFiles/remove_outliers.dir/normal_estimation.cpp.o
+.PHONY : normal_estimation.cpp.o
 
-moment_of_inertia.i: moment_of_inertia.cpp.i
+normal_estimation.i: normal_estimation.cpp.i
 
-.PHONY : moment_of_inertia.i
+.PHONY : normal_estimation.i
 
 # target to preprocess a source file
-moment_of_inertia.cpp.i:
-	$(MAKE) -f CMakeFiles/remove_outliers.dir/build.make CMakeFiles/remove_outliers.dir/moment_of_inertia.cpp.i
-.PHONY : moment_of_inertia.cpp.i
+normal_estimation.cpp.i:
+	$(MAKE) -f CMakeFiles/remove_outliers.dir/build.make CMakeFiles/remove_outliers.dir/normal_estimation.cpp.i
+.PHONY : normal_estimation.cpp.i
 
-moment_of_inertia.s: moment_of_inertia.cpp.s
+normal_estimation.s: normal_estimation.cpp.s
 
-.PHONY : moment_of_inertia.s
+.PHONY : normal_estimation.s
 
 # target to generate assembly for a file
-moment_of_inertia.cpp.s:
-	$(MAKE) -f CMakeFiles/remove_outliers.dir/build.make CMakeFiles/remove_outliers.dir/moment_of_inertia.cpp.s
-.PHONY : moment_of_inertia.cpp.s
+normal_estimation.cpp.s:
+	$(MAKE) -f CMakeFiles/remove_outliers.dir/build.make CMakeFiles/remove_outliers.dir/normal_estimation.cpp.s
+.PHONY : normal_estimation.cpp.s
 
 # Help Target
 help:
@@ -159,9 +159,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... remove_outliers"
 	@echo "... edit_cache"
-	@echo "... moment_of_inertia.o"
-	@echo "... moment_of_inertia.i"
-	@echo "... moment_of_inertia.s"
+	@echo "... normal_estimation.o"
+	@echo "... normal_estimation.i"
+	@echo "... normal_estimation.s"
 .PHONY : help
 
 
